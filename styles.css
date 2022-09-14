@@ -13,7 +13,7 @@ body {
 
 .box-container {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 #question {
@@ -30,6 +30,8 @@ body {
       rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  padding: 20px;
+  text-align: justify;
 }
 
 #display {
@@ -160,7 +162,6 @@ button {
 .card {
   width: 100%;
   height: 100%;
-  padding: 50px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -189,6 +190,10 @@ button {
   top: 0;
 }
 
+.blog-title {
+  margin: 30px auto;
+}
+
 #blogs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -198,6 +203,12 @@ button {
 #blogs .card {
   align-items: flex-start;
   text-align: justify;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .blog-author {
@@ -227,6 +238,10 @@ button {
   }
 
   #histories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #blogs {
     grid-template-columns: repeat(1, 1fr);
   }
 }
