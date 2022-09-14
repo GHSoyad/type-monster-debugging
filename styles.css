@@ -189,6 +189,37 @@ button {
   top: 0;
 }
 
+#blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+#blogs .card {
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.blog-author {
+  margin: 10px 0;
+}
+
+.fa-solid {
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 10px;
+}
+
+.blog-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.blog-info .fa-solid {
+  vertical-align: middle;
+}
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
