@@ -84,6 +84,7 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>Your typing speed is <span class="bold green">${wpm(timeTaken)}</span> WPM</p>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -137,6 +138,12 @@ setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = parseInt((currentTime - startTime) / 1000);
 
-
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+
+//Count typing speed
+const wpm = (timeTaken) => {
+  const wordCount = userText.split(' ').length;
+  const typingSpeed = Math.round((wordCount * 60) / timeTaken);
+  return typingSpeed;
+}
