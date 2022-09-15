@@ -37,9 +37,11 @@
                     <div class="blog-details">
                         <h3>How Does Javascript Event loop Work</h3>
                         <em class="blog-author"><i class="fa-solid fa-user"></i>Golam Hasnain Soyad</em>
-                        <p>JavaScript event loop monitors the Call Stack and the Callback Queue. If the Call Stack is
-                            empty, the Event Loop will take the first event from the queue and will push it to the Call
-                            Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
+                        <p>JavaScript event loop is a constantly running process that monitors both the Call Stack and
+                            the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event
+                            from the queue and will push it to the Call Stack, which effectively runs it. And if the
+                            call stack is not empty, the event loop waits until it is empty and places the next function
+                            from the callback queue to the call stack.</p>
                     </div>
                     <div class="blog-info">
                         <p><i class="fa-solid fa-eye"></i> 45</p>
